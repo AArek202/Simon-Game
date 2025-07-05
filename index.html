@@ -1,77 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simon Says by Rekabi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Simon Says by Rekabi</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-</head>
+  <body>
+    <h1 id="level-title">Press Start</h1>
 
-<body>
-  <h1 id="level-title">Press Start</h1>
-
-      <div type="button" id="start" class="btn2">
-          <h1 class="startbtn"> Start </h1>
-      </div>
-
-  <div class="score">
-
-    <div class="currentscore">
-      <h2>Current Score</h2>
-      <h2 class="cscore"></h2>
+    <div type="button" id="start" class="btn2">
+      <div class="startbtn">Start</div>
     </div>
 
-    <div class="heighestscore">
-      <h2>Heigest Score</h2>
-      <h2 class="hscore"></h2>
-    </div>
-
-  </div>
-
-  <div class="container">
-    <div class="row">
-
-      <div type="button" id="green" class="btn green">
-
+    <div class="score">
+      <div class="currentscore">
+        <h2>Current Score</h2>
+        <h2 class="cscore"></h2>
       </div>
 
-      <div type="button" id="red" class="btn red">
-
+      <div class="heighestscore">
+        <h2>Heigest Score</h2>
+        <h2 class="hscore"></h2>
       </div>
     </div>
 
+    <div class="container">
+      <div class="row">
+        <div type="button" id="green" class="btn green"></div>
 
-    <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
+        <div type="button" id="red" class="btn red"></div>
       </div>
 
+      <div class="row">
+        <div type="button" id="yellow" class="btn yellow"></div>
+        <div type="button" id="blue" class="btn blue"></div>
+      </div>
     </div>
 
-  </div>
+    <div class="htplay">
+      <p>
+        Simon is an interactive game that tests your memory by requiring you to
+        repeat a sequence of colors and sounds. As the game progresses, the
+        sequence becomes longer and more complex, testing your ability to
+        remember the pattern.
+      </p>
 
-  <div class="htplay">
-    <p>
-      Have you ever played Simon? well, in case you did, good for you, go ahead and try this website. If you did not, basically, Simon is an interactive game that tests your memory by requiring you to repeat a sequence of colors and sounds. As the game progresses, the sequence becomes longer and more complex, testing your ability to remember the pattern.
-    </p>
+      <p>Basic Rules</p>
 
-    <p>
-     How do I play Simon??
-    </p>
+      <p>
+        The game starts when Simon flashes a random button (color) along with
+        its sound. The player must press the same button. Simon then adds
+        another button to the sequence. The player repeats the entire sequence
+        in the correct order. The sequence continues to grow, testing the
+        player's memory.
+      </p>
+    </div>
 
-    <p>
-      The game starts when Simon flashes a random button (color) along with its sound. The player must press the same button. Simon then adds another button to the sequence. The player repeats the entire sequence in the correct order. The sequence continues to grow, testing the player's memory.
-    </p>
-  </div>
-
-
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-  <script src="game.js"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="game.js"></script>
+  </body>
 </html>
