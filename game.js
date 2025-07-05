@@ -9,7 +9,13 @@ var started = false;
 
 var level = 0;
 
-$(document).keydown(function(){
+var score = 0;
+
+var highScore = 0;
+
+var heighstScore =[];
+
+$("#start").click(function(){
 
   if (!started) {
     $("#level-title").text("Level " + level);
@@ -18,6 +24,7 @@ $(document).keydown(function(){
   }
 
 });
+
 
 $(".btn").click(function(){
     var userChosenColour = $(this).attr("id");
@@ -75,6 +82,8 @@ function checkAnswer(currentLevel){
         nextSequence()
       },1000);
 
+        myScore();
+
     };
 
   } else {
@@ -88,16 +97,37 @@ function checkAnswer(currentLevel){
         $("body").removeClass("game-over");
       }, 200);
 
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Press Start to Play Again");
 
-      $(document).keydown(startOver());
+      $(".startbtn").click(startOver);
 
+      scoreCheck();
+      
   }
 
+};
+
+
+function myScore(){
+  score+=100;
+  $(".cscore").text(score);
+};
+
+function scoreCheck(){
+
+  if (score > highScore) {
+    
+      highScore = score;
+      heighstScore.push(highScore);
+      $(".hscore").text(highScore);
+
+  };
+  
 };
 
 function startOver(){
   level=0;
   gamePattern = [];
   started = false;
-}
+  score = 0;
+};
